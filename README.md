@@ -9,7 +9,7 @@ Este es el link del [repositorio](https://github.com/claudiaalozano/Industry-4.0
 
 
 ***
-## Integrantes
+## Integrantes:
 
 1. [Alba](https://github.com/albabernal03) 
 2. [Carmen](https://github.com/carmenm02)
@@ -20,4 +20,4 @@ Este es el link del [repositorio](https://github.com/claudiaalozano/Industry-4.0
 
 
 ***
-## Algoritmo
+## Algoritmo:
