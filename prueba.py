@@ -15,3 +15,13 @@ def Transformacion():
 
     return(df, df2, df3)
 print(Transformacion())
+
+def Limpiador():
+    dato1= pd.read_csv('corn1.csv')
+    dato1.dropna()
+    dato2= pd.read_csv('corn2.csv')
+    dato2.dropna()
+    dato3=pd.read_csv('corn3.csv')
+    dato3.dropna()
+    return(dato1,dato2,dato3)
+print(Limpiador())
