@@ -19,10 +19,10 @@ class Analisis():
   
   def Limpiador(): #Limpiamos el dataset para asegurarnos de no tener elementos nulos.
       dato1= pd.read_csv('corn1.csv')
-      dato1.dropna()
+      c1=dato1.dropna()
       dato2= pd.read_csv('corn2.csv')
-      dato2.dropna()
+      c2=dato2.dropna()
       dato3=pd.read_csv('corn3.csv')
-      dato3.dropna()
+      c3=dato3.dropna()
     
-      return(dato1,dato2,dato3)
+      return(c1,c2,c3)
