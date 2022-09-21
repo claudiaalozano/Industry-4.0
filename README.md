@@ -6,7 +6,7 @@ Este es el link del [repositorio](https://github.com/claudiaalozano/Industry-4.0
 
 ***
 <h2>¿De qué trata esta tarea?</h2>
-
+En la primera parte de este trabajo debíamos traducir y analizar una conferencia sobre la implantación de las cadenas de Markov y la deformación dinamica del tiempo en la industria 4.0.
 
 ***
 ## Integrantes:
