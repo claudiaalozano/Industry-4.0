@@ -13,7 +13,7 @@ print(df2)
 
 
 dataframe3= pd.read_csv('corn2015-2017.txt')
-dataframe2.to_csv('corn3.csv', index= None)
-df2= pd.read_csv('corn3.csv')
-print(df2)
+dataframe3.to_csv('corn3.csv', index= None)
+df3= pd.read_csv('corn3.csv')
+print(df3)
 
