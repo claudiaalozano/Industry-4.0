@@ -14,7 +14,7 @@ Este es el link del [repositorio](https://github.com/claudiaalozano/Industry-4.0
 1. [Alba](https://github.com/albabernal03) 
 2. [Carmen](https://github.com/carmenm02)
 3. [Laura](https://github.com/lauralardies)
-4. [Carlota] (https://github.com/crltsnch)
+4. [Carlota](https://github.com/crltsnch)
 5. [Claudia](https://github.com/claudiaalozano)
 
 
