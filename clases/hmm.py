@@ -3,11 +3,10 @@ import matplotlib.pyplot as plt
 from hmmlearn import hmm
 from analisis import Analisis
 
-fichero = Analisis.Transformacion()
-fichero = Analisis.Limpiador()
+Analisis.Transformacion()
+Analisis.Limpiador()
 
-data = pd.read_csv(fichero)
-data = data.dropna()
+data = pd.read_csv("corn3.csv")
 data["Fecha"] = pd.to_datetime(data["Fecha"])
 data["Cambios Precio Maiz"] = data["Precio Maiz"].diff()
 data = data[data["Fecha"] >= pd.to_datetime("2013-01-06")]
