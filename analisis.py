@@ -33,3 +33,6 @@ class Analisis():
     c3=dato3.dropna()
     
     return(c1,c2,c3)
+
+Analisis.Transformacion()
+Analisis.Limpiador()
