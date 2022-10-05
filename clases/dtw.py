@@ -104,12 +104,12 @@ def comparacion(i, j):
 def prueba(i, j):
   comparacion(i, j)
 
-def izquierda_con_derecha(:)
-  izquierda =["1", "3", "5", "7" , "9"]
-  for i in range (len(izquierda) -1):
-    comparacion(izquierda[i], izquierda[i+1])
+#def izquierda_con_derecha(:)
+  #izquierda =["1", "3", "5", "7" , "9"]
+  #for i in range (len(izquierda) -1):
+    #comparacion(izquierda[i], izquierda[i+1])
 
-izquierda_con_derecha()
+#izquierda_con_derecha()
 
 prueba("1", "5")
   
