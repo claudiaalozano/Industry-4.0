@@ -5,10 +5,10 @@ from analisis import Analisis
 import numpy as np
 
 Analisis.Transformacion()
+Analisis.Remplazar()
 Analisis.Limpiador()
 
 data = pd.read_csv("corn2.csv")
-data = pd.DataFrame(np.vstack([data.columns, data]))
 
 data[0] = pd.to_datetime(data[0])
 data[2] = data[1].diff()
