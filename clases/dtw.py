@@ -84,7 +84,11 @@ def comparacion(i, j):
   print("la distancia entre las dos series temporales es: " str(out[-1[-1]]))
 
   print("Mostramos las señales de cada nota de voz para ver la diferencia entre ambas.")
-  plt.figure()
+  plt.figure(figsize=(10,10))
+  plt.plot(a)
+  plt.plot(b)
+  plt.legend(["Line a", "Line b"])
+  plt.show()
   
   
 
