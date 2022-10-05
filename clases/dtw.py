@@ -50,7 +50,7 @@ def bestPath(out):
 def comparacion(i, j):
   print("Subimos los audios y bajamos el número de datos a cada audio.")
   dato1 = tfio.audio.AudioIOTensor("audios_dtw/" + str(i) + ".mp3")
-  dato2= tfio.audio.AudioIOTensor("audios_dtw/" + str(i) + ".mp3")
+  dato2= tfio.audio.AudioIOTensor("audios_dtw/" + str(j) + ".mp3")
 
   aux1 = dato1.to_tensor()
   aux2 = dato2.to_tensor()
@@ -59,15 +59,15 @@ def comparacion(i, j):
   aux2 = aux2 [:, 0]
   
   
-  a = tfio.audio.resample(aux1, dato1.rate.numpy(), 800)
-  b = tfio.audio.resample(aux2, dato1.rate.numpy(), 800)
+  a = tfio.audio.resample(aux1, dato1.rate.numpy(), 2000)
+  b = tfio.audio.resample(aux2, dato1.rate.numpy(), 2000)
 
   print("mostramos los dos audios para comparar.")
   Audio(a.numpy(), rate=dato1.rate.numpy() )
   Audio(b.numpy(), rate=dato2.rate.numpy() )
   
 
-  out = dtw(list(a), list(b))
+  out = dtw(a, b)
   z = bestPath (out)
   print("Cuanto más recta sea la línea azul, presenta más relación y cercanía las dos notas de voz.")
 

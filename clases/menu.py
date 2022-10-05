@@ -17,4 +17,9 @@ def iniciar():
     print(markov1)
     print(markov2)
     print(markov3)
-    
+
+  if opcion == 2:
+    print("CARGANDO EL EJERCICIO...")
+    prueba("2", "5")
+
+print(iniciar())
