@@ -50,8 +50,8 @@ def bestPath(out):
 
 def comparacion(i, j):
   print("Subimos los audios y bajamos el número de datos a cada audio.")
-  dato1, _ = tourchaudio.load("https://replit.com/@albabernal03/Industry-40?from=notifications#audios_dtw#" + str(i))
-  dato2, _ = tourchaudio.load("https://replit.com/@albabernal03/Industry-40?from=notifications#audios_dtw#" + str(j))
+  dato1, _ = tourchaudio.load("C:\Users\Claudia\Desktop\Industry-4.0\audios_dtw" + str(i))
+  dato2, _ = tourchaudio.load("C:\Users\Claudia\Desktop\Industry-4.0\audios_dtw" + str(j))
   
   resample = tourchaudio.transforms.Resemple(_, 1000)
   
