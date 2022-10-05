@@ -1,20 +1,20 @@
-import hmm 
-
+from dtw import *
+from hmm import *
 def iniciar():
-  print("========================")
-  print("  Bienvenido al menú ") 
-  print("========================")
-  print("[1] Ejecutar el hmm ")
-  print('[2] Ejecutar el dtw')
-
-  opcion = input('>')
-
+  print("=====================")
+  print("=BIENVENIDOS AL MENU=")
+  print("=====================")
+  print("==[1] EJECUTAR HMM ==")
+  print("==[2] EJECUTAR DTW ==")
+  print("=====================")
+  opcion= input('>')
   if opcion == 1:
-    print('Ejecutando el hmm....')
+    print("CARGANDO EL EJERCICIO...")
     markov = CadenasMarkov()
-    markov.grafica_datos()
-    markov.analisis_markov()
-    markov.grafica_predicciones()
-  elif opcion == 2:
-    print('Ejecutando el dtw...')
+    markov1= markov.grafica_datos()
+    markov2 =markov.analisis_markov()
+    markov3=markov.grafica_predicciones()
+    print(markov1)
+    print(markov2)
+    print(markov3)
     

@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import torch
 import torchaudio
-
 from IPython.display import Audio, display
 
 def dtw(first, second):
@@ -50,8 +49,8 @@ def bestPath(out):
 
 def comparacion(i, j):
   print("Subimos los audios y bajamos el número de datos a cada audio.")
-  dato1, _ = torchaudio.load("https://replit.com/@albabernal03/Industry-40?from=notifications#audios_dtw#" + str(i))
-  dato2, _ = torchaudio.load("https://replit.com/@albabernal03/Industry-40?from=notifications#audios_dtw#" + str(j))
+  dato1, _ = torchaudio.load("audios_dtw/" + str(i))
+  dato2, _ = torchaudio.load("audios_dtw/" + str(j))
   
   resample = torchaudio.transforms.Resample(_, 1000)
   
