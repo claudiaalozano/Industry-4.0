@@ -20,4 +20,3 @@ En la primera parte de este trabajo debíamos traducir y analizar una conferenci
 
 
 ***
-## Algoritmo:
