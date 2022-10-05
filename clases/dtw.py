@@ -49,8 +49,8 @@ def bestPath(out):
 
 def comparacion(i, j):
   print("Subimos los audios y bajamos el número de datos a cada audio.")
-  dato1 = tfio.audio.AudioIOTensor("C:\Users\Claudia\Desktop\Industry-4.0\audios_dtw" + str(i) + ".mp3")
-  dato2= tfio.audio.AudioIOTensor("C:\Users\Claudia\Desktop\Industry-4.0\audios_dtw" + str(i) + ".mp3")
+  dato1 = tfio.audio.AudioIOTensor("audios_dtw/" + str(i) + ".mp3")
+  dato2= tfio.audio.AudioIOTensor("audios_dtw/" + str(i) + ".mp3")
 
   aux1 = dato1.to_tensor()
   aux2 = dato2.to_tensor()
