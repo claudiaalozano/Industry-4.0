@@ -64,4 +64,6 @@ class CadenasMarkov():
         plt.savefig("graficos/prediccion.png")
 
 markov = CadenasMarkov()
-markov.grafica_datos
+markov.grafica_datos()
+markov.analisis_markov()
+markov.
