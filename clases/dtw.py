@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import torch
 import torchaudio
-
 from IPython.display import Audio, display
 
 def dtw(first, second):
@@ -50,13 +49,18 @@ def bestPath(out):
 
 def comparacion(i, j):
   print("Subimos los audios y bajamos el número de datos a cada audio.")
+<<<<<<< HEAD
   dato1, _ = tourchaudio.load("C:\Users\Claudia\Desktop\Industry-4.0\audios_dtw" + str(i))
   dato2, _ = tourchaudio.load("C:\Users\Claudia\Desktop\Industry-4.0\audios_dtw" + str(j))
+=======
+  dato1, _ = torchaudio.load("audios_dtw/" + str(i))
+  dato2, _ = torchaudio.load("audios_dtw/" + str(j))
+>>>>>>> 28b761fcb4b3e907335baa915bf280e061d66bd7
   
-  resample = tourchaudio.transforms.Resemple(_, 1000)
+  resample = torchaudio.transforms.Resample(_, 1000)
   
-  a = resemple(dato1)
-  b = resemple(dato2)
+  ººººººººººººººa = resample(dato1)
+  b = resample(dato2)
 
   a = a[0]
   b = b[0]
@@ -65,7 +69,7 @@ def comparacion(i, j):
   display(Audio(dato1, rate =_ ))
   display(Audio(dato2, rate = _))
 
-  out = DTW(a, b)
+  out = dtw(a, b)
   z = bestPath 
   print("Cuanto más recta sea la línea azul, presenta más relación y cercanía las dos notas de voz.")
 
@@ -104,12 +108,14 @@ def comparacion(i, j):
 def prueba(i, j):
   comparacion(i, j)
 
-#def izquierda_con_derecha(:)
-  #izquierda =["1", "3", "5", "7" , "9"]
-  #for i in range (len(izquierda) -1):
-    #comparacion(izquierda[i], izquierda[i+1])
+def izquierda_con_derecha():
+  izquierda =["1", "3", "5", "7" , "9"]
+  for i in range (len(izquierda) -1):
+    comparacion(izquierda[i], izquierda[i+1])
 
-#izquierda_con_derecha()
+izquierda_con_derecha()
+
+prueba("1", "5")
 
 print(prueba)
-prueba("1", "5")
+print(izquierda_con_derecha)

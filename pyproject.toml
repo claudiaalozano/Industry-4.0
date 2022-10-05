@@ -12,6 +12,7 @@ hmmlearn = "^0.2.7"
 numpy = "^1.23.3"
 torch = "^1.12.1"
 torchaudio = "^0.12.1"
+ipython = "^8.5.0"
 
 [tool.poetry.dev-dependencies]
 
