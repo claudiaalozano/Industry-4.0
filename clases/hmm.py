@@ -63,6 +63,7 @@ class CadenasMarkov():
         plt.ylabel("Diferencia del Precio del Maíz", fontsize=16)
         plt.savefig("graficos/prediccion.png")
 
+
 markov = CadenasMarkov()
 markov.grafica_datos()
 markov.analisis_markov()

@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import torch
 import torchaudio
 import searbon as sns
-import IPython.display import Audio, display
+from Python.display import Audio, display
 
 def dtw(first, second):
   n = len(first)
@@ -62,8 +62,8 @@ def comparacion(i, j):
   b = b[0]
 
   print("mostramos los dos audios para comparar.")
-  display(Audio[dato1, rate = _])
-  display(Audio[dato2, rate = _])
+  display(Audio(dato1, rate =_ ))
+  display(Audio(dato2, rate = _))
 
   out = DTW(a, b)
   z = bestPath 
@@ -81,7 +81,7 @@ def comparacion(i, j):
   plt.imshow(out,cmap="hot", interpolation="nearset")
   plt.show()
 
-  print("la distancia entre las dos series temporales es: " str(out[-1[-1]]))
+  print("la distancia entre las dos series temporales es: " + str(out[-1][-1]))
 
   print("Mostramos las señales de cada nota de voz para ver la diferencia entre ambas.")
   plt.figure(figsize=(10,10))
@@ -94,8 +94,8 @@ def comparacion(i, j):
   plt.figure(figsize=(10,10))
   print("Unimos las dos series de tiempo.")
 
-  for i,j in range z:
-    plt.plot([j-1, i-1] , [b[j-1], a [i-1], color ="green"])
+  for i, j in z:
+    plt.plot([j-1, i-1] , [b[j-1], a [i-1]], color ="green")
     plt.plot(a)
     plt.plot(b)
     plt.show()
