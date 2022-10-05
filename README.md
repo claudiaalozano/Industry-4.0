@@ -6,7 +6,9 @@ Este es el link del [repositorio](https://github.com/claudiaalozano/Industry-4.0
 
 ***
 <h2>¿De qué trata esta tarea?</h2>
-En la primera parte de este trabajo debíamos traducir y analizar una conferencia sobre la implantación de las cadenas de Markov y la deformación dinamica del tiempo en la industria 4.0.
+En la primera parte de este trabajo debíamos traducir y analizar una conferencia sobre la implantación de las Cadenas de Markov y la Deformación Dinámica del Tiempo en la industria 4.0. Tras ello debemos pasarlo a Latex.
+
+Una vez entendido el documento, aplicamos las cadenas de Markov y el DTW para resolución de los ejercicios.
 
 ***
 ## Integrantes:
@@ -20,4 +22,3 @@ En la primera parte de este trabajo debíamos traducir y analizar una conferenci
 
 
 ***
-## Algoritmo:
