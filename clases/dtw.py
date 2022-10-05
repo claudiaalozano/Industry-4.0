@@ -50,8 +50,8 @@ def bestPath(out):
 
 def comparacion(i, j):
   print("Subimos los audios y bajamos el número de datos a cada audio.")
-  dato1, _ = tourchaudio.load("https://replit.com/@albabernal03/Industry-40?from=notifications#audios_dtw" + str(i))
-  dato2, _ = tourchaudio.load("https://replit.com/@albabernal03/Industry-40?from=notifications#audios_dtw" + str(j))
+  dato1, _ = tourchaudio.load("https://replit.com/@albabernal03/Industry-40?from=notifications#audios_dtw#" + str(i))
+  dato2, _ = tourchaudio.load("https://replit.com/@albabernal03/Industry-40?from=notifications#audios_dtw#" + str(j))
   
   resample = tourchaudio.transforms.Resemple(_, 1000)
   
@@ -89,6 +89,27 @@ def comparacion(i, j):
   plt.plot(b)
   plt.legend(["Line a", "Line b"])
   plt.show()
+
+  z.remove([0,0])
+  plt.figure(figsize=(10,10))
+  print("Unimos las dos series de tiempo.")
+
+  for i,j in range z:
+    plt.plot([j-1, i-1] , [b[j-1], a [i-1], color ="green"])
+    plt.plot(a)
+    plt.plot(b)
+    plt.show()
+
+
+def prueba(i, j):
+  comparacion(i, j)
+
+def izquierda_con_derecha(:)
+izquierda =["1", "3", "5", "7" , "9"]
+for i in range (len(izquierda) -1):
+  comparacion(izquierda[i], izquierda[i+1])
+
+izquierda_con_derecha()
   
   
 
