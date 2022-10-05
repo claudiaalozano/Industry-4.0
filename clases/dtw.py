@@ -1,7 +1,7 @@
 import numpy as np 
 import matplotlib.pyplot as plt
-import torch
-import torchaudio
+import tensorflow as tf
+import tensorflow_io as tfio
 from IPython.display import Audio, display
 
 def dtw(first, second):
@@ -49,28 +49,26 @@ def bestPath(out):
 
 def comparacion(i, j):
   print("Subimos los audios y bajamos el número de datos a cada audio.")
-<<<<<<< HEAD
-  dato1, _ = tourchaudio.load("C:\Users\Claudia\Desktop\Industry-4.0\audios_dtw" + str(i))
-  dato2, _ = tourchaudio.load("C:\Users\Claudia\Desktop\Industry-4.0\audios_dtw" + str(j))
-=======
-  dato1, _ = torchaudio.load("audios_dtw/" + str(i))
-  dato2, _ = torchaudio.load("audios_dtw/" + str(j))
->>>>>>> 28b761fcb4b3e907335baa915bf280e061d66bd7
-  
-  resample = torchaudio.transforms.Resample(_, 1000)
-  
-  ººººººººººººººa = resample(dato1)
-  b = resample(dato2)
+  dato1 = tfio.audio.AudioIOTensor("C:\Users\Claudia\Desktop\Industry-4.0\audios_dtw" + str(i) + ".mp3")
+  dato2= tfio.audio.AudioIOTensor("C:\Users\Claudia\Desktop\Industry-4.0\audios_dtw" + str(i) + ".mp3")
 
-  a = a[0]
-  b = b[0]
+  aux1 = dato1.to_tensor()
+  aux2 = dato2.to_tensor()
+
+  aux1 = aux1 [:, 0]
+  aux2 = aux2 [:, 0]
+  
+  
+  a = tfio.audio.resample(aux1, dato1.rate.numpy(), 800)
+  b = tfio.audio.resample(aux2, dato1.rate.numpy(), 800)
 
   print("mostramos los dos audios para comparar.")
-  display(Audio(dato1, rate =_ ))
-  display(Audio(dato2, rate = _))
+  Audio(a.numpy(), rate=dato1.rate.numpy() )
+  Audio(b.numpy(), rate=dato2.rate.numpy() )
+  
 
-  out = dtw(a, b)
-  z = bestPath 
+  out = dtw(list(a), list(b))
+  z = bestPath (out)
   print("Cuanto más recta sea la línea azul, presenta más relación y cercanía las dos notas de voz.")
 
   x =[]
