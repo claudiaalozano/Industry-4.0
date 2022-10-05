@@ -111,5 +111,5 @@ def prueba(i, j):
 
 #izquierda_con_derecha()
 
+print(prueba)
 prueba("1", "5")
-  
