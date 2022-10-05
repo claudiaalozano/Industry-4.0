@@ -6,7 +6,7 @@ class Analisis():
 
     dataframe1 = pd.read_csv('corn_OHLC2013-2017.txt')
     dataframe1.to_csv('corn1.csv', index= None)
-    df = pd.read_csv('corn1.csv')
+    df1 = pd.read_csv('corn1.csv')
 
     dataframe2 = pd.read_csv('corn2013-2017.txt')
     dataframe2.to_csv('corn2.csv', index= None)
@@ -16,7 +16,14 @@ class Analisis():
     dataframe3.to_csv('corn3.csv', index= None)
     df3 = pd.read_csv('corn3.csv')
 
-    return(df, df2, df3)
+    return(df1, df2, df3)
+
+  def Remplazar(): #Remplazamos las comas por puntos y comas
+    x1= pd.read_csv('corn1.csv', sep=';')
+    x2= pd.read_csv('corn2.csv', sep=';')
+    x3= pd.read_csv('corn3.csv', sep=';')
+
+    return(x1, x2, x3)
   
   def Limpiador(): # Limpiamos el dataset para asegurarnos de no tener elementos nulos.
 

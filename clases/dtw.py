@@ -50,4 +50,43 @@ def bestPath(out):
 
 def comparacion(i, j):
   print("Subimos los audios y bajamos el número de datos a cada audio.")
-  dato1, _ = tourchaudio.load("")
+  dato1, _ = tourchaudio.load("https://replit.com/@albabernal03/Industry-40?from=notifications#audios_dtw" + str(i))
+  dato2, _ = tourchaudio.load("https://replit.com/@albabernal03/Industry-40?from=notifications#audios_dtw" + str(j))
+  
+  resample = tourchaudio.transforms.Resemple(_, 1000)
+  
+  a = resemple(dato1)
+  b = resemple(dato2)
+
+  a = a[0]
+  b = b[0]
+
+  print("mostramos los dos audios para comparar.")
+  display(Audio[dato1, rate = _])
+  display(Audio[dato2, rate = _])
+
+  out = DTW(a, b)
+  z = bestPath 
+  print("Cuanto más recta sea la línea azul, presenta más relación y cercanía las dos notas de voz.")
+
+  x =[]
+  y =[]
+
+  for i,j in z:
+    x.append(i)
+    y.append(j)
+
+  plt.figure(figsize =(10,10))
+  plt.plot(y, x, color ="blue")
+  plt.imshow(out,cmap="hot", interpolation="nearset")
+  plt.show()
+
+  print("la distancia entre las dos series temporales es: " str(out[-1[-1]]))
+
+  print("Mostramos las señales de cada nota de voz para ver la diferencia entre ambas.")
+  plt.figure()
+  
+  
+
+  
+  
