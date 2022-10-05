@@ -66,4 +66,4 @@ class CadenasMarkov():
 markov = CadenasMarkov()
 markov.grafica_datos()
 markov.analisis_markov()
-markov.
+markov.grafica_predicciones()
