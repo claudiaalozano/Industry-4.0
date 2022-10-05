@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import torch
 import torchaudio
-import searbon as sns
-from Python.display import Audio, display
+
+from IPython.display import Audio, display
 
 def dtw(first, second):
   n = len(first)
