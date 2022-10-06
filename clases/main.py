@@ -3,4 +3,3 @@ from menu import iniciar
 
 if __name__ == '__main__':
     menu.inciar()
-

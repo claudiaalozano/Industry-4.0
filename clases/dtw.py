@@ -49,22 +49,21 @@ def bestPath(out):
 
 def comparacion(i, j):
   print("Subimos los audios y bajamos el número de datos a cada audio.")
-  dato1 = tfio.audio.AudioIOTensor("audios_dtw/" + str(i) + ".mp3")
-  dato2= tfio.audio.AudioIOTensor("audios_dtw/" + str(j) + ".mp3")
+  dato1 = tfio.audio.AudioIOTensor((tf.io.read_file("audios_dtw/" + str(i) + ".mp3")))
+  dato2= tfio.audio.AudioIOTensor((tf.io.read_file("audios_dtw/" + str(j) + ".mp3")))
 
-  aux1 = dato1.to_tensor()
-  aux2 = dato2.to_tensor()
+  
 
-  aux1 = aux1 [:, 0]
-  aux2 = aux2 [:, 0]
+  aux1 = dato1[:, 0]
+  aux2 = dato2[:, 0]
   
   
-  a = tfio.audio.resample(aux1, dato1.rate.numpy(), 2000)
-  b = tfio.audio.resample(aux2, dato1.rate.numpy(), 2000)
+  a = tfio.audio.resample(aux1, dato1.rate.numpy[0], 300)
+  b = tfio.audio.resample(aux2, dato1.rate.numpy[0], 300)
 
   print("mostramos los dos audios para comparar.")
-  Audio(a.numpy(), rate=dato1.rate.numpy() )
-  Audio(b.numpy(), rate=dato2.rate.numpy() )
+  Audio(a.numpy(), rate=dato1.rate.numpy[0])
+  Audio(b.numpy(), rate=dato2.rate.numpy[0])
   
 
   out = dtw(a, b)
